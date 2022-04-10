@@ -6,7 +6,7 @@
 /*   By: houazzan <houazzan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 18:02:51 by houazzan          #+#    #+#             */
-/*   Updated: 2022/04/09 21:57:19 by houazzan         ###   ########.fr       */
+/*   Updated: 2022/04/10 14:12:59 by houazzan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	get_instructions(t_node **stack_a, t_node **stack_b)
 			rotate_two(stack_a, stack_b);
 		else if (!ft_strncmp(buff, "rrr\n"))
 			re_rotete_two(stack_a, stack_b);
-		else if (!ft_strncmp(buff, "pb\n"))
+		else if (!ft_strncmp(buff, "pb\n") && (*stack_a) != (*stack_a)->next)
 			push_to(stack_a, stack_b, "pb", 0);
 		else
 			others(buff, stack_a, stack_b);
