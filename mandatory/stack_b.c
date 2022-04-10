@@ -6,7 +6,7 @@
 /*   By: houazzan <houazzan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 13:48:36 by houazzan          #+#    #+#             */
-/*   Updated: 2022/04/09 23:34:27 by houazzan         ###   ########.fr       */
+/*   Updated: 2022/04/10 10:25:57 by houazzan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ void	sorting_3(t_node **stack_a, t_node **stack_b, int len)
 	(*stack_a)->next->data > (*stack_a)->next->next->data))
 	{
 		if (len == 1 && (*stack_a)->data > (*stack_a)->next->data)
-			swap_first_two(stack_a, "sa", 1);
+		{
+			printf(" hello\n");
+			benefits(stack_a, stack_b, 1);
+		}
 		else if (len == 1 || (len >= 2 && (*stack_b)->data > \
 		((*stack_b)->next->data)) || (len == 3 && (*stack_b)->data > \
 		(*stack_b)->next->next->data))
@@ -31,7 +34,7 @@ void	sorting_3(t_node **stack_a, t_node **stack_b, int len)
 			len--;
 		}
 		else
-			swap_first_two(stack_b, "sb", 1);
+			benefits(stack_a, stack_b, 2);
 	}
 }
 
@@ -46,7 +49,7 @@ int	optimisation_b(t_node **stack_b, t_node **stack_a, int len)
 	else if (len == 2)
 	{
 		if ((*stack_b)->data < ((*stack_b)->next->data))
-			swap_first_two(stack_b, "sb", 1);
+			benefits(stack_a, stack_b, 2);
 		push_to(stack_b, stack_a, "pa", 1);
 		push_to(stack_b, stack_a, "pa", 1);
 	}

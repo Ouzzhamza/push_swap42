@@ -6,7 +6,7 @@
 /*   By: houazzan <houazzan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 22:00:54 by houazzan          #+#    #+#             */
-/*   Updated: 2022/04/09 22:12:09 by houazzan         ###   ########.fr       */
+/*   Updated: 2022/04/10 10:19:45 by houazzan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ int	protect(t_node **stack)
 	return (count);
 }
 /* **************************************************** */
-/*                    🅵🆁🅴🅴_🅰🅻🅻
-                        */
+/*                    🅵🆁🅴🅴_🅰🅻🅻                     */
 /* **************************************************** */
 
 void	free_all(t_node **stack_a, t_node **stack_b, t_data *data)
@@ -82,4 +81,16 @@ int	sorted(t_node **stack, int order, int len)
 		pointer = pointer->next;
 	}
 	return (1);
+}
+
+void	benefits(t_node **stack_a, t_node **stack_b, int type)
+{
+	if (type == 1 && (*stack_b)->data < (*stack_b)->next->data)
+		ss(stack_a, stack_b, "ss", 1);
+	else if (type == 1 && (*stack_b)->data > (*stack_b)->next->data)
+		swap_first_two(stack_a, "sa", 1);
+	else if (type == 2 && (*stack_a)->data > (*stack_a)->next->data)
+		ss(stack_a, stack_b, "ss", 1);
+	else if (type == 2 && (*stack_a)->data < (*stack_a)->next->data)
+		swap_first_two(stack_b, "sb", 1);
 }
