@@ -6,7 +6,7 @@
 /*   By: houazzan <houazzan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 13:48:36 by houazzan          #+#    #+#             */
-/*   Updated: 2022/04/10 10:25:57 by houazzan         ###   ########.fr       */
+/*   Updated: 2022/04/10 11:24:54 by houazzan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ void	sorting_3(t_node **stack_a, t_node **stack_b, int len)
 	(*stack_a)->next->data > (*stack_a)->next->next->data))
 	{
 		if (len == 1 && (*stack_a)->data > (*stack_a)->next->data)
-		{
-			printf(" hello\n");
-			benefits(stack_a, stack_b, 1);
-		}
+			swap_first_two(stack_a, "sa", 1);
 		else if (len == 1 || (len >= 2 && (*stack_b)->data > \
 		((*stack_b)->next->data)) || (len == 3 && (*stack_b)->data > \
 		(*stack_b)->next->next->data))
@@ -84,7 +81,7 @@ int	push_to_a(t_node **stack_a, t_node **stack_b, t_data *data, int len)
 	}
 	data->av_limit_number = ft_lstsize((*stack_b));
 	while (nb_elm / 2 != data->av_limit_number && pushed_under--)
-		end_to_first(stack_b, "rrb", 1);
+		benefits(stack_a, stack_b, 4);
 	push_to_b(stack_a, stack_b, data, nb_elm / 2 + nb_elm % 2);
 	push_to_a(stack_a, stack_b, data, nb_elm / 2);
 	return (0);

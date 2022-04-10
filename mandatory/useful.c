@@ -6,7 +6,7 @@
 /*   By: houazzan <houazzan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 22:00:54 by houazzan          #+#    #+#             */
-/*   Updated: 2022/04/10 10:19:45 by houazzan         ###   ########.fr       */
+/*   Updated: 2022/04/10 11:23:22 by houazzan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,14 +83,26 @@ int	sorted(t_node **stack, int order, int len)
 	return (1);
 }
 
+/* **************************************************** */
+/*                    🅱🅴🅽🅴🅵🅸🆃🆂                     */
+/* **************************************************** */
+
 void	benefits(t_node **stack_a, t_node **stack_b, int type)
 {
 	if (type == 1 && (*stack_b)->data < (*stack_b)->next->data)
-		ss(stack_a, stack_b, "ss", 1);
+		ss(stack_a, stack_b, "ss");
 	else if (type == 1 && (*stack_b)->data > (*stack_b)->next->data)
 		swap_first_two(stack_a, "sa", 1);
 	else if (type == 2 && (*stack_a)->data > (*stack_a)->next->data)
-		ss(stack_a, stack_b, "ss", 1);
+		ss(stack_a, stack_b, "ss");
 	else if (type == 2 && (*stack_a)->data < (*stack_a)->next->data)
 		swap_first_two(stack_b, "sb", 1);
+	else if ((type == 3) && (*stack_b)->prev->data > (*stack_b)->data)
+		rrr(stack_a, stack_b, "rrr");
+	else if ((type == 3) && (*stack_b)->prev->data < (*stack_b)->data)
+		end_to_first(stack_a, "rra", 1);
+	else if ((type == 4) && (*stack_a)->prev->data < (*stack_a)->data)
+		rrr(stack_a, stack_b, "rr");
+	else if ((type == 4) && (*stack_a)->prev->data > (*stack_a)->data)
+		end_to_first(stack_b, "rrb", 1);
 }

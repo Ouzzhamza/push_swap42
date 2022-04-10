@@ -9,7 +9,7 @@ FSRC 	 = ft_atoi.c  ft_putstr.c ft_lstnew.c ft_lstadd_back.c ft_lstlast.c \
 		 ft_strchr.c ft_bzero.c ft_split.c ft_strdup.c ft_strjoin.c \
 		
 SFRC_DIR = swaping_functions/
-SFRC	 = end_to_first.c push_to.c first_to_end.c swap_first_two.c swap_both.c\
+SFRC	 = end_to_first.c push_to.c first_to_end.c swap_first_two.c swap_both.c rotate_both.c\
 
 MFRC_DIR = mandatory/
 SRC		 =  pivot_chose.c useful.c stack_a.c stack_b.c check_err.c\

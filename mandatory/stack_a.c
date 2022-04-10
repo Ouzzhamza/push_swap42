@@ -6,7 +6,7 @@
 /*   By: houazzan <houazzan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 13:42:22 by houazzan          #+#    #+#             */
-/*   Updated: 2022/04/10 10:24:22 by houazzan         ###   ########.fr       */
+/*   Updated: 2022/04/10 11:24:33 by houazzan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	sort_3(t_node **stack_a, t_node **stack_b, int len)
 	{
 		if (len == 3 && (*stack_a)->data > (*stack_a)->next->data && \
 		(*stack_a)->next->next->data)
-			swap_first_two(stack_a, "sa", 1);
+			benefits(stack_a, stack_b, 1);
 		else if (len == 3 && !((*stack_a)->next->next->data > \
 		(*stack_a)->data && (*stack_a)->next->next->data > \
 		(*stack_a)->next->data))
@@ -32,7 +32,7 @@ void	sort_3(t_node **stack_a, t_node **stack_b, int len)
 			len--;
 		}
 		else if ((*stack_a)->data > (*stack_a)->next->data)
-			swap_first_two(stack_a, "sa", 1);
+			benefits(stack_a, stack_b, 1);
 		else if (len++)
 			push_to(stack_b, stack_a, "pa", 1);
 	}
@@ -127,7 +127,7 @@ int	push_to_b(t_node **stack_a, t_node **stack_b, t_data *data, int len)
 	}
 	data->av_limit_number = ft_lstsize((*stack_a));
 	while (nb_elm / 2 + nb_elm % 2 != data->av_limit_number && pushed_under--)
-		end_to_first(stack_a, "rra", 1);
+		benefits(stack_a, stack_b, 3);
 	push_to_b(stack_a, stack_b, data, nb_elm / 2 + nb_elm % 2);
 	push_to_a(stack_a, stack_b, data, nb_elm / 2);
 	return (0);

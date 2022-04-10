@@ -6,7 +6,7 @@
 /*   By: houazzan <houazzan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 09:21:03 by houazzan          #+#    #+#             */
-/*   Updated: 2022/04/10 09:58:32 by houazzan         ###   ########.fr       */
+/*   Updated: 2022/04/10 11:25:13 by houazzan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,8 @@ void	delete_node(t_node **node);
 void	first_to_end(t_node **node, char *operation, int type);
 void	end_to_first(t_node **node, char *operation, int type);
 void	swap_first_two(t_node **head, char *operation, int type);
-void	ss(t_node **stack_a, t_node **stack_b, char *operation, int type);
+void	ss(t_node **stack_a, t_node **stack_b, char *operation);
+void	rrr(t_node **stack_a, t_node **stack_b, char *operation);
 void	optimisation(t_node **stack_a, t_node **stack_b, t_data *data, int len);
 void	benefits(t_node **stack_a, t_node **stack_b, int type);
 int		push_to_b(t_node **stack_a, t_node **stack_b, t_data *data, int len);
