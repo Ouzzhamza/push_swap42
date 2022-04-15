@@ -6,7 +6,7 @@
 /*   By: houazzan <houazzan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 09:21:03 by houazzan          #+#    #+#             */
-/*   Updated: 2022/04/10 11:25:13 by houazzan         ###   ########.fr       */
+/*   Updated: 2022/04/15 19:03:57 by houazzan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ typedef struct data
 /*             🆁🅴🅶🆄🅻🅰🆁 🅵🆄🅽🅲🆃🅸🅾🅽🆂              */
 /* **************************************************** */
 
-int		ft_atoi(const char *str);
+long long int	ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *src);
 size_t	ft_strlen(const char *c);
