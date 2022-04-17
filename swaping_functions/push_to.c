@@ -6,7 +6,7 @@
 /*   By: houazzan <houazzan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 18:28:23 by houazzan          #+#    #+#             */
-/*   Updated: 2022/04/17 18:42:12 by houazzan         ###   ########.fr       */
+/*   Updated: 2022/04/17 21:40:23 by houazzan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	push_to(t_node **stack_from, t_node **stack_to, char *operation, \
 {
 	t_node	*save;
 
-	if ((*stack_from) != NULL && (*stack_from)->next != (*stack_from))
+	if ((*stack_from) != NULL)
 	{
 
 		save = ft_lstnew((*stack_from)->data);

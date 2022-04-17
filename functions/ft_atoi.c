@@ -6,7 +6,7 @@
 /*   By: houazzan <houazzan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 20:59:28 by houazzan          #+#    #+#             */
-/*   Updated: 2022/04/17 20:12:11 by houazzan         ###   ########.fr       */
+/*   Updated: 2022/04/17 21:05:25 by houazzan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ long long	ft_atoi(char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		res = res * 10 + str[i++] - '0';
-		if (res > MAX_INT || res < MIN_INT)
+		if (res * signe > MAX_INT || res * signe < MIN_INT)
 			push_errors();
 	}
 	if ((str[i] < '0' || str[i] > '9') && str[i] != '\0' && str[i] != 32)

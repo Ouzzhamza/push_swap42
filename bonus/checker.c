@@ -6,7 +6,7 @@
 /*   By: houazzan <houazzan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 12:28:37 by houazzan          #+#    #+#             */
-/*   Updated: 2022/04/08 06:55:52 by houazzan         ###   ########.fr       */
+/*   Updated: 2022/04/17 21:40:05 by houazzan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,10 @@ int	main(int ac, char **av)
 	stack_a = initiate_linked_list(ac, av, stack_a, data);
 	data->av_limit_number = ft_lstsize(stack_a);
 	get_instructions(&stack_a, &stack_b);
-	if (sorted(&stack_a, ASCENDING, data->av_limit_number))
+	if (sorted(&stack_a, ASCENDING, data->av_limit_number) && stack_b == NULL)
 		write(1, "OK\n", 3);
-	else if (!sorted(&stack_a, ASCENDING, data->av_limit_number))
+	else if (!sorted(&stack_a, ASCENDING, data->av_limit_number) || \
+			stack_b != NULL)
 		write(1, "KO\n", 3);
 	free_all(&stack_a, &stack_b, data);
 	return (0);
