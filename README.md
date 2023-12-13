@@ -17,7 +17,7 @@ Developed as an algorithmic challenge/project to explore sorting techniques and 
 Encourages understanding of various sorting algorithms and their implementation in a constrained environment.
 Aims to enhance problem-solving skills, algorithm optimization, and efficient use of available resources.
 ## Chosen Algorithm:
-### Quick Sort => [https://www.javatpoint.com/quick-sort]
+### Quick Sort => https://www.javatpoint.com/quick-sort
 
 ## Usage:
 
